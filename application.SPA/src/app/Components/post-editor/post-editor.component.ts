@@ -26,7 +26,6 @@ onOptionsSelected(event){
 }
   constructor(private frmbuilder: FormBuilder,public postService:PostService,private alertifyService: AlertifyService,private authService:AuthService,private route: Router,private router: ActivatedRoute,) {
     this.router.data.subscribe(data => {
-      debugger;
       this.post = data['post'];
       this.optionSelected = this.options[0]
       this.postForm = this.frmbuilder.group({
@@ -36,7 +35,6 @@ onOptionsSelected(event){
       });
    }
    public submit(value) {
-     debugger;
     this.post.title = value.title;
     this.post.body = value.body;
     this.post.state = this.optionSelected;

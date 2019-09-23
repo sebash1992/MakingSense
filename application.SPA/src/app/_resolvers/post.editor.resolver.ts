@@ -13,7 +13,6 @@ export class PostEditorResolver implements Resolve<Post>{
 
     }
     resolve(route:ActivatedRouteSnapshot):Observable<Post>{
-        debugger;
         return this.postService.getPost(route.params['id']).catch(error =>{
             this.alertify.error('A ocurrido un problema');
             return Observable.of(null);

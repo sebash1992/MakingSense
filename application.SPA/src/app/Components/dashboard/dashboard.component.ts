@@ -30,7 +30,6 @@ export class DashboardComponent implements OnInit {
    }
 
   ngOnInit() {
-
   }
   remove(id:string){
     this.postService.delete(id).subscribe(

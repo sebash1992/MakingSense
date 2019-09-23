@@ -59,7 +59,6 @@ export class LoginComponent  implements OnInit, OnDestroy {
           }
         },
         error =>{ 
-          debugger;
           this.isloading =false;
           this.alertifyService.error(error.login_failure[0]);});
     }

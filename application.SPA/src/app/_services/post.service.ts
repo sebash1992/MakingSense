@@ -27,7 +27,6 @@ export class PostService extends BaseService {
     }
 
     getPost(id: string) {
-        debugger;
         let header = new HttpHeaders();
         if(id == ""){
             id = "123";
@@ -35,13 +34,11 @@ export class PostService extends BaseService {
         header = header.append('Content-Type', 'application/json');
         return this.http.get<Post>(this.url+"/"+id,   {headers: this.addAuthHeader(header), observe: 'response'})
         .map(response => {
-            debugger;
             return response.body;
         });
     }
     post(post: Post)
      {
-         debugger;
         let headers = new HttpHeaders().set('Content-Type', 'application/json')        
         return this.http.post(this.url , post,  {headers: this.addAuthHeader(headers)});
     }
