@@ -9,9 +9,9 @@
     </button>
   
   
-    <div class="collapse navbar-collapse"
+    <div class="collapse navbar-collapse pull-right"
          [ngClass]="{ 'show': navbarOpen }">
-      <ul class="navbar-nav mr-auto">
+      <ul class="nav navbar-nav navbar-right">
         <li class="nav-item" *ngIf="!authService.isLoggedIn()">
           <a class="nav-link" [routerLink]="['/login']">Login</a>
         </li>

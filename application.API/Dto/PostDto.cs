@@ -17,9 +17,9 @@ namespace application.API.Dto
         public string ClientId {get; set;}
         public string Owner  { get; set; }
     }
-    public class PolicyProfile : Profile
+    public class PostProfile : Profile
     {
-        public PolicyProfile()
+        public PostProfile()
         {
             CreateMap<Post, PostDto>()
             .ForMember(dest => dest.Owner, opt =>
