@@ -25,7 +25,8 @@ Password:test@user2
 ## Docuementation
 The project was documented using Swagger, to acces the documentation once the project is running enter to http://localhost:5000/swagger/
 
-
+## Testing
+In Progress
 
 ## TODO
 
