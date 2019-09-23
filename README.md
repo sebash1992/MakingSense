@@ -14,8 +14,8 @@ dotnet run
 
 ## Usage
 Test User 1:
-Username:Test1@myblog.com
-Password:test@user1
+Username: Test@myblog.com
+Password: test@user1
 
 Test User 2:
 Username:Test2@myblog.com
