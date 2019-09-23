@@ -1,0 +1,57 @@
+@import '../../../styles';
+.buttonpannel{
+    height:49vh;    
+    background-color: $light;
+    color:$light;
+   // border: 2px solid $secondary;
+    margin: 5px;
+    
+    &:hover{        
+       cursor: pointer;
+    }
+    &:active{        
+        background-color: $primary;     
+    }
+    font-size: 4rem;
+}
+
+.bg-success{
+    transition: all .2s ease-in-out;
+    &:hover{        
+        background-color: lighten($success, 15%) !important;     
+        transform: scale(0.8)
+    }
+}
+.bg-info{
+    transition: all .2s ease-in-out;
+    &:hover{        
+        background-color: lighten($info, 15%) !important;    
+        transform: scale(0.8)
+    }
+}
+.bg-danger{
+    transition: all .2s ease-in-out;
+    &:hover{        
+        background-color: lighten($danger, 15%) !important;    
+        transform: scale(0.8)
+    }
+}
+.bg-warning{
+    transition: all .2s ease-in-out;
+    &:hover{        
+        background-color: lighten($warning, 15%) !important;    
+        transform: scale(0.8)
+    }
+}
+.verticalAlign{
+    vertical-align: middle;
+}
+.post-active{
+    color:green;
+}
+.post-active{
+    color:green;
+}
+.post-private{
+    color:red;
+}

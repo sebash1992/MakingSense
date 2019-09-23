@@ -1,0 +1,50 @@
+<app-loading [hidden]="!isloading"></app-loading>
+
+<!-- Header title-->
+<div class="row d-flex align-items-end">
+    <div class="col-md-8">
+        <h2 *ngIf="post.id == ''"><i class="icon-paste"></i> Nuevo Post</h2>
+        <h2 *ngIf="post.id != ''"><i class="icon-paste"></i> Editar Post</h2>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+<hr>
+<!-- Header title //-->
+
+<form [formGroup]='postForm' (ngSubmit)="submit(postForm.value)">
+    <div class="row clearfix">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label>Nombre</label>
+                <input id="title" type="text" class="form-control has-danger" formControlName="title" name="title">
+                <div class="alert alert-danger" role="alert" *ngIf="postForm.controls['title'].touched && !postForm.controls['title'].valid">
+                    <span *ngIf="postForm.controls['title'].hasError('required') ">  
+                    El nombre es obligatorio.
+                    </span>
+                    <span *ngIf="postForm.controls['title'].hasError('maxlength') ">  
+                    La longitud maxima para el nombre es de 64 caracteres. 
+                </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Cuerpo</label>
+                <textarea type="text" class="form-control" formControlName="body" name="body">
+                  </textarea>
+            </div>
+            <div>
+                <select class='select-option' required [(ngModel)]='optionSelected' (ngModelChange)='onOptionsSelected($event)' [ngModelOptions]="{standalone: true}">
+                    <option class='option' *ngFor='let option of options' [value]="option">{{option}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Footer -->
+    <div class="col-12">
+        <div class="pull-right footerButtons">
+            <button type="submit" class="btn btn-link" [routerLink]="['/dashboard']">Cancelar</button>
+            <button type="submit" class="btn btn-primary" [disabled]="!postForm.valid">Guardar</button>
+        </div>
+    </div>
+  </form>

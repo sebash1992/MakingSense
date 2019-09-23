@@ -1,0 +1,54 @@
+<app-loading [hidden]="!isLoading"></app-loading>
+<!-- Header title-->
+<div class="row d-flex align-items-end">
+    <div class="col-md-8">
+        <h2><i class="icon-paste"></i>Posts</h2>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" *ngIf="authService.isLoggedIn()">
+        <div class="columna col-md-8">
+            <div class="actionButtons widget clearfix">
+                <!--  .actionButtons Left-->
+                <div class="btn-group pull-left" role="group">
+                    <button type="button" [routerLink]="['/editPost/','']" class="btn btn-primary newSale">Nuevo post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="posts.length>0">
+      <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let post of posts">
+        <div class="card">
+          <img src="assets/image.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">{{post.title}}</h3>
+            <sub>{{post.owner}}- {{ post.creationDate | date: 'dd/MM/yyyy'}}</sub>
+            <br/>
+            <sub  *ngIf="authUser == post.clientId" [ngClass]="{
+              'post-active':post.state === 'Activo',
+              'post-draft':post.state === 'Draft',
+              'post-private':post.state === 'Privado'
+            }">{{post.state}}</sub>
+           
+           
+           
+           
+            <p class="card-text">{{post.body}}</p>
+            <div class="pull-right" *ngIf="authUser == post.clientId">
+              <button [routerLink]="['/editPost/',post.id]"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+              <button (click)="remove(post.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row" *ngIf="posts.length==0">
+        <div class="col-sm-12">
+          <h5>No hay post disponibles</h5>
+        </div>
+      </div>
+  </div>

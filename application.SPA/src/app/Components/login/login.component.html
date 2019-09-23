@@ -1,0 +1,20 @@
+<app-loading [hidden]="!isloading"></app-loading>
+<div class="row">
+    <div class="col-md-6 new-user-alert">
+        <div *ngIf="brandNew" class="alert alert-success" role="alert">
+            <strong>All set!</strong> Please login with your account
+        </div>
+
+    </div>
+</div>
+
+
+<div class="wrapper">
+    <form #f="ngForm" novalidate (ngSubmit)="login(f)" class="form-signin text-center">
+        <input id="userName" type="text" required name="userName" class="form-control" placeholder="Email" [ngModel]="credentials.userName" #userName="ngModel" tmFocus validateEmail>
+        <small [hidden]="userName.valid || (userName.pristine && !submitted)" class="text-danger">Por favor inserte un usuario valido</small>
+        <input type="password" class="form-control" id="password" required name="password" placeholder="Contraseña" ngModel>
+        <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="f.invalid">Ingresar</button>
+    </form>
+    <p class="text-center text-dark text-muted mt-3">Mi Blog . 09-2019</p>
+</div>

@@ -1,0 +1,120 @@
+@import 'variables';
+@import 'theme';
+@import '../node_modules/bootstrap/scss/bootstrap';
+body {
+    background: white;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.detailcard {
+    .card-body {
+        padding: 0rem;
+        font-weight: 300;
+        .cardHeader {
+            height: 3rem;
+            border-bottom: 1px solid darken($primary, 15);
+            text-align: center;
+            padding-top: .7rem;
+        }
+    }
+    .card-header {
+        background-color: transparent;
+        .cardHeaderTitle {
+            font-size: 18px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            width: 80%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .faButton {
+            color: $primary;
+            font-size: 22px;
+            cursor: pointer;
+            transition: all .3s ease;
+            &:hover {
+                color: darken($primary, 20);
+            }
+        }
+    }
+}
+
+.link {
+    &:hover {
+        color: $link-color !important;
+        cursor: pointer;
+    }
+    &:active {
+        color: $link-color !important;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.actionButtons {
+    margin-bottom: 15px;
+}
+
+
+.main .columna {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.main .titulo {
+    color: #262a34;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+.main .widget {
+    margin-bottom: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.footerButtons {
+    position: fixed;
+    bottom: 30px;
+    right: 2%;
+}
+.searchBox{
+    input{
+        width: inherit !important;
+        height: 5vh;
+        font-size: 18pt;
+    }
+}
+
+.clientMessage{
+    font-size: 20pt;
+}
+.policyDescription{
+    font-size: 14pt;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .clientMessage{
+        font-size: 16pt;
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

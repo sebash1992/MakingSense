@@ -1,0 +1,53 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css');
+$fontFamily:'Roboto',
+sans-serif;
+$fontSize: 1em;
+$borderRadius: 4px;
+$disabledOpacity: 0.35;
+//Header
+$headerBorderWidth: 1px;
+$headerBorderColor: #dddddd;
+$headerBgColor: #fff;
+$headerTextColor: $body-color;
+$headerFontWeight: 300;
+$headerIconTextColor: $body-color;
+//Content
+$contentBorderWidth: 1px;
+$contentBorderColor: #dddddd;
+$contentBgColor: #f2f5f7;
+$contentTextColor: #362b36;
+$contentFontWeight: 300;
+//Default State
+$stateDefaultBorderWidth: 1px;
+$stateDefaultBorderColor: #dddddd;
+$stateDefaultBgColor: #ffffff;
+$stateDefaultTextColor: #362b36;
+//Active State - Primary Color
+$stateActiveBorderColor: $primary;
+$stateActiveBgColor: $primary;
+$stateActiveTextColor: #ffffff!important;
+//Highlight State
+$stateDefaultBorderWidth: 1px;
+$stateHighlightBorderColor:#576077;
+$stateHighlightBgColor: #576077;
+$stateHighlightTextColor:#ffffff;
+//Focus State
+$stateFocusBorderColor: #74b2e2;
+$stateFocusBgColor: #e4f1fb;
+$stateFocusTextColor: $primary;
+//Error State
+$stateErrorBorderColor: #cd0a0a;
+$stateErrorBgColor: #cd0a0a;
+$stateErrorTextColor: #ffffff;
+//Hover State
+$stateHoverBorderColor: #74b2e2;
+$stateHoverBgColor: #e4f1fb;
+$stateHoverTextColor: #0070a3;
+//Forms
+$inputBgColor: #ffffff;
+$inputTextColor: #222222;
+$invalidInputBorderColor: #cd0a0a;
+$inputGroupTextColor: #2779aa;
+@import '../node_modules/primeng/resources/themes/_theme';
