@@ -16,11 +16,20 @@ cd ..\application.API\
 dotnet run
 ```
 
+## Docuementation
+The project was documented using Swagger, to acces the documentation once the project is running enter to http://localhost:5000/swagger/
+
+
+
 ## TODO
 
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
+- [x] Add swagger documentation
+- [ ] Add in the UI the posibility to create a new account
+- [ ] Implement TDD
+- [ ] Improve styles
+- [ ] Give the option to share a post
+- [ ] Add paggination
+- [ ] Add Filtering
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
